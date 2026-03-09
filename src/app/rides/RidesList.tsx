@@ -65,10 +65,40 @@ export default function RidesList() {
   }, [from, to, date]);
 
   return (
-    <div className="py-10">
+    <div>
+      {/* Hero with faded van/NZ road background */}
+      <div className="relative overflow-hidden bg-teal-900" style={{ minHeight: "220px" }}>
+        {/* Background photo — very faded */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80')`,
+            opacity: 0.18,
+            filter: "saturate(0.6)",
+          }}
+        />
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-teal-900/60 via-teal-900/40 to-teal-900/80" />
+        {/* Content */}
+        <div className="relative max-w-6xl mx-auto px-4 py-14 md:py-20">
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-3 leading-tight">
+            Find a Ride
+          </h1>
+          <p className="text-teal-200 text-lg max-w-xl">
+            Browse shared rides across Aotearoa — from city hops to epic road trips.
+          </p>
+          <div className="flex gap-3 mt-6 flex-wrap text-sm text-teal-300">
+            <span>✦ WhatsApp direct</span>
+            <span>✦ No booking fees</span>
+            <span>✦ Free to use</span>
+          </div>
+        </div>
+        {/* Fade-out bottom edge into the page */}
+        <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-gray-50 to-transparent" />
+      </div>
+
+      <div className="py-10">
       <div className="max-w-6xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-teal-800 mb-2">Find a Ride</h1>
-        <p className="text-gray-600 mb-8">Browse available rideshares across New Zealand</p>
 
         <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-8">
           <div className="grid md:grid-cols-4 gap-4">
@@ -152,6 +182,7 @@ export default function RidesList() {
             ))}
           </div>
         )}
+      </div>
       </div>
     </div>
   );
