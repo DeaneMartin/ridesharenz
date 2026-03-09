@@ -149,28 +149,7 @@ function UpcomingRidesWithMap() {
   return <RidesMapSection rides={rides} />;
 }
 
-function CommunityStats() {
-  return (
-    <section className="bg-teal-800 text-white py-16">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-10">Community Impact</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {[
-            { num: "500+", label: "Rides Shared" },
-            { num: "1,200+", label: "Happy Riders" },
-            { num: "30+", label: "NZ Towns" },
-            { num: "15t", label: "CO₂ Saved" },
-          ].map((stat) => (
-            <div key={stat.label}>
-              <p className="text-3xl md:text-4xl font-bold text-orange-400">{stat.num}</p>
-              <p className="text-teal-200 mt-1">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+// CommunityStats removed — will show real Supabase counts once we have real data
 
 function SpareSeats() {
   return (
@@ -198,7 +177,7 @@ export default function HomePage() {
       <HeroSection />
       <HowItWorks />
       <UpcomingRidesWithMap />
-      <CommunityStats />
+      {/* CommunityStats removed until we have real numbers */}
       <SpareSeats />
     </>
   );
