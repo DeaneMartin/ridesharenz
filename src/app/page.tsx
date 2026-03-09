@@ -28,7 +28,7 @@ function HeroSection() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=1600&q=80&fit=crop')`,
+          backgroundImage: `url('https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1600&q=80')`,
           opacity: 0.22,
           filter: "saturate(0.5)",
         }}
