@@ -23,8 +23,18 @@ function HeroSection() {
   const [date, setDate] = useState("");
 
   return (
-    <section className="bg-gradient-to-br from-teal-700 via-teal-800 to-teal-900 text-white py-20 md:py-28">
-      <div className="max-w-6xl mx-auto px-4 text-center">
+    <section className="relative bg-gradient-to-br from-teal-700 via-teal-800 to-teal-900 text-white py-20 md:py-28 overflow-hidden">
+      {/* Faded van/NZ road background photo */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80')`,
+          opacity: 0.15,
+          filter: "saturate(0.5)",
+        }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-teal-900/30 via-transparent to-teal-900/50" />
+      <div className="relative max-w-6xl mx-auto px-4 text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Share the Journey</h1>
         <p className="text-2xl md:text-3xl font-semibold text-orange-400 mb-8">
           Split the Cost
